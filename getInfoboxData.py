@@ -13,17 +13,10 @@ req = r.get(url)
 
 soup = bs4.BeautifulSoup(req.text, 'lxml')
 
-infobox_table = soup.find('table', {'class': 'infobox vcard'}).findAll('tr')
 
-infobox = {}
-for row in infobox_table:
-    if row.text:
-        print(row.name, " : ", row.text)
-        for child in row.children:
-            for sibling in child.next_siblings:
-                try:
-                    print(child.string, " ; ", sibling.text)
-                except AttributeError:
-                    continue
-    else:
-        continue
+infobox = soup.find('table', {'class': 'infobox vcard'})
+
+infobox_table = infobox.tbody
+
+for child in infobox_table:
+    print(child.text)
