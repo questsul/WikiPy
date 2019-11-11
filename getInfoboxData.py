@@ -4,7 +4,7 @@ import requests as r
 import bs4
 
 
-title = 'Arsène_Wenger' #Terry_Pratchett Arsène_Wenger Bill_Clinton
+title = 'Terry_Pratchett' #Terry_Pratchett Arsène_Wenger Bill_Clinton
 url = "http://en.wikipedia.org/wiki/{title}".format(title=title)
 
 req = r.get(url)
@@ -18,5 +18,7 @@ infobox = soup.find('table', {'class': 'infobox vcard'})
 
 infobox_table = infobox.tbody
 
+info = []
 for child in infobox_table:
-    print(child.text)
+    info.append(child.text.split('\n'))
+print(info)
