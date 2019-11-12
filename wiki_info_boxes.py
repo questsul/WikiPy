@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-## Script for retriwing data from wikipedia infoboxes.
+## Script for retrieving data from wikipedia info boxes.
 ## Usage: 
 ##      python wiki_info_boxes.py
 ## Data will be stored in a working directory to json file: wiki_data.json
@@ -10,7 +10,7 @@ import wptools as wp
 import re
 import json
 
-# Random list of famous people prefomatted to work with wikipedia url.
+# Random list of famous people preformatted to work with wikipedia url.
 PEOPLE = [
     "Walt_Disney",
     "Nostradamus",
