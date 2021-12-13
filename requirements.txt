@@ -1,5 +1,5 @@
 certifi==2019.9.11
 html2text==2019.9.26
-lxml==4.4.1
+lxml==4.6.5
 pycurl==7.43.0.3
 wptools==0.4.17
